@@ -71,7 +71,7 @@ function displayMood(mood) {
 
   // Custom background logic
   if (mood === "sad") {
-    document.body.style.background = "linear-gradient(135deg, #1e1e1e, #3a3a3a)";
+    document.body.style.background = "linear-gradient(135deg, #c7a7a7ff, #482a2aff)";
   } else if (mood === "romantic") {
     document.body.style.background = "linear-gradient(135deg, #ffdde1, #ee9ca7)";
   } else {

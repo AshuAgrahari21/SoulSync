@@ -9,7 +9,7 @@
 body {
   text-align: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  background: linear-gradient(135deg, hwb(182 62% 0%), #ffb7b7);
   transition: background 0.8s ease, color 0.5s ease;
   overflow-x: hidden;
 }
@@ -165,7 +165,7 @@ footer {
 /* Dark mode styles */
 body.dark {
   background: linear-gradient(135deg, #121212, #1e1e1e);
-  color: #eee;
+  color: #646efe;
 }
 
 body.dark button {
