@@ -196,3 +196,46 @@ function showToast(message, color = "#444") {
     setTimeout(() => toast.remove(), 400);
   }, 2500);
 }
+
+
+
+
+
+
+/* 🎶 Mood-based autoplay setup */
+const moodAudio = document.getElementById("moodAudio");
+
+// Example mood triggers (replace or integrate with your actual buttons)
+const moods = {
+  happy: "songs/happy.mp3",
+  sad: "songs/sad.mp3",
+  romantic: "songs/romantic.mp3"
+};
+
+// Example: user types mood name in chat
+function playMoodMusic(message) {
+  const lower = message.toLowerCase();
+  let moodFile = null;
+
+  if (lower.includes("happy")) moodFile = moods.happy;
+  else if (lower.includes("sad")) moodFile = moods.sad;
+  else if (lower.includes("romantic")) moodFile = moods.romantic;
+
+  if (moodFile) {
+    moodAudio.src = moodFile;
+    moodAudio.play().catch(err =>
+      console.log("Autoplay blocked until user interacts:", err)
+    );
+  }
+}
+
+// Call after each user message
+function handleUserInput() {
+  const text = userInput.value.trim();
+  if (!text) return;
+  addMessage(text, "user");
+  userInput.value = "";
+  playMoodMusic(text); // 🎧 triggers music when mood detected
+  botReply();
+}
+
