@@ -21,7 +21,7 @@ const moodData = {
   sad: {
     title: " WILDFLOWER  – Billie Eilish",
     link: "https://www.youtube.com/watch?v=wKBYEhTgoHU",
-    embed: "https://www.youtube.com/embed/hLQl3WQQoQ0?autoplay=1",
+    embed: "https://www.youtube.com/watch?v=wKBYEhTgoHU?autoplay=1",
     color: "#89CFF0",
     emoji: "😢",
     quote: "Even the darkest nights end with sunrise. 🌅"
